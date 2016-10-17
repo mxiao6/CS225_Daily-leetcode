@@ -1,0 +1,82 @@
+----------------------------------------
+pet.h
+----------------------------------------
+#ifndef _PET_H
+#define _PET_H
+
+#include <string>
+
+class Pet {
+ public:
+  // Declare your constructors here!
+    Pet();
+    Pet(std::string name, int birth_year, std::string type, std::string owner_name);
+  // Other member functions
+  void setName(std::string newName);
+  void setBY(int newBY);
+  void setType(std::string newType);
+  void setOwnerName(std::string newName);
+  std::string getName();
+  int getBY();
+  std::string getType();
+  std::string getOwnerName();
+
+ private:
+  std::string name;
+  int birth_year;
+  std::string type;
+  std::string owner_name;
+};
+
+#endif
+----------------------------------------
+pet.cpp
+----------------------------------------
+#include "pet.h"
+
+// Put your constructor code here!
+Pet::Pet() {
+    name = "Rover";
+    birth_year = 2016;
+    type = "dog";
+    owner_name = "Cinda";
+}
+
+Pet::Pet(std::string n, int b, std::string t, std::string o) {
+    name = n;
+    birth_year = b;
+    type = t;
+    owner_name = o;
+}
+
+void Pet::setName(std::string newName) {
+  name = newName;
+}
+
+void Pet::setBY(int newBY) {
+  birth_year = newBY;
+}
+
+void Pet::setType(std::string newType) {
+  type = newType;
+}
+
+void Pet::setOwnerName(std::string newName) {
+  owner_name = newName;
+}
+
+std::string Pet::getName() {
+  return name;
+}
+
+int Pet::getBY() {
+  return birth_year;
+}
+
+std::string Pet::getType() {
+  return type;
+}
+
+std::string Pet::getOwnerName() {
+  return owner_name;
+}
