@@ -1,0 +1,20 @@
+The Problem
+
+    You will be writing a forutne telling program (similar to a magic 8 ball)
+        Your program should take in a question from the user ending in a question mark
+            (if the string does not end in a ? then print an error message and return 1)
+        The string should be be less than or equal to 100 characters but greater than 1
+            (if it isn't, print an error message and return 1)
+        You should write a hashing function of your choice that maps the input string to one of the values 0, 1, 2, 3, 4
+        Your hash function must be deterministic and depend on the input string (maybe your function depends on the length of the string, the numbe of spaces, the ascii value of the characters, or all of the above!)
+            It cannot be the same as the hash function you wrote for the last question
+        Your program should ouput what the input string hashed to and an answer to their question
+
+Sample inputs and outputs:
+
+Input: Will I get an A on my test?
+
+Output:
+
+Will I get an A on my test? hashed to value 3
+The outlook is bleak.

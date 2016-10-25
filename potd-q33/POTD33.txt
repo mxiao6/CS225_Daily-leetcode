@@ -1,0 +1,20 @@
+The Problem
+CS225 Daily Exercise
+
+TODO: * You will be writing a weather predicting program * A user will input a city state pair and you will output what the weather will be the next day * You will do so by hashing the string to a value between 0 and 3 * You must write a hash function that determines which of 0, 1, 2, or 3 a string hashes to. The function will determine this by summing all of the ASCII values of the characters in the string and then using the modulus operator to force the value into the bounds of [0,3] * Your program should call the hasing function you wrote and then output what the string hashed to and a different weather prediction for each hash value.
+
+Sample inputs and outputs:
+
+Input: Dallas, Texas
+
+Output:
+
+Dallas, Texas hashed to value 2
+It will be sunny all day tomorrow.
+
+Input: Chicago, Illinois
+
+Output:
+
+Chicago, Illinois hashed to value 1
+There will be a tornado tomorrow. Plan your day accordingly.
