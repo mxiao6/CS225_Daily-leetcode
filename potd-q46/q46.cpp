@@ -7,13 +7,15 @@ class Food{
         string name;
     public:
         Food(){name = "Food";}
-        void virtual printColor(){cout << "Foods come in a variety of colors." << endl;}
+        virtual void printColor(){cout << "Foods come in a variety of colors." << endl;}
+        virtual ~Food(){}
 };
 
 class Fruit : public Food{
     public:
         Fruit(){name = "Fruit";}
-        void virtual printColor(){cout << "Fruits come in a variety of colors." << endl;}
+        virtual void printColor(){cout << "Fruits come in a variety of colors." << endl;}
+        virtual ~Fruit(){}
 };
 
 class SpecificFruit : public Fruit{
@@ -34,7 +36,8 @@ void printColors(Food * arr[], int size){
 }
 
 int main() {
-	Food* p[4];
+	int size = 4;
+	Food* p[size];
 	//Fruits come in a variety of colors.
 	p[0] = new Food();
 
@@ -49,4 +52,7 @@ int main() {
 
 	printColors(p, 4);
 
+	for (int i = 0; i < size; i++) {
+		delete p[i];
+	}
 }
