@@ -36,9 +36,11 @@ void print(Circle const & c) {
 
 int main() {
 	Circle c(2);
+	Circle d(3);
 
 	// cannot change the Circle object the pointer points to
-	const Circle * p1 = &c; 
+	const Circle * p1 = &c;
+	// p1 -> setRadius(4); // cannot change the content of the object
 	print(*p1);
 
 	/* 
@@ -47,6 +49,7 @@ int main() {
 	  int * x = p; x = q; where p and q are integers)
 	*/
 	Circle * const p2 = &c; 
+	// p2 = &d; //cannot change what the pointer points to
 	p2 -> setRadius(3);
 	print(*p2);
 }
