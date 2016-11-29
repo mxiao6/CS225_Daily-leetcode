@@ -26,15 +26,28 @@ public:
     }
 };
 
+// void addTime(int uin, int time, string task){
+//     map<int, vector<pair<int, string> > >::iterator it;
+//     it = records.find(uin);
+//     if(it == records.end()){            // see if uin is in map already
+//         vector<pair<int, string> > vec;
+//         pair<int, string> entry (time, task);
+//         vec.push_back(entry);
+//         records.insert(pair<int, vector<pair<int, string> > > (uin, vec));
+//     } else {
+//         pair<int, string> entry (time, task);
+//         records[uin].push_back(entry);
+//     }
+// }
+
 void addTime(int uin, int time, string task){
-    map<int, vector<pair<int, string> > >::iterator it;
-    it = records.find(uin);
+    auto it = records.find(uin);
     if(it == records.end()){            // see if uin is in map already
         vector<pair<int, string> > vec;
         pair<int, string> entry (time, task);
         vec.push_back(entry);
-        records.insert(pair<int, vector<pair<int, string> > > (uin, vec));
-    } else {
+        records[uin] = vec;
+    } else{
         pair<int, string> entry (time, task);
         records[uin].push_back(entry);
     }
